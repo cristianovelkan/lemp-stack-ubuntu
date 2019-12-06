@@ -3,6 +3,10 @@ sudo apt-get remove apache2 -y
 sudo apt-get purge apache2 -y
 sudo apt autoremove -y
 
+sudo apt-get purge --auto-remove libapache2-mod-php7.2
+sudo rm -rf /etc/php/7.2/apache2
+sudo rm -rf /etc/apache2
+
 sudo rm /var/www/html/index.html
 
 #update
@@ -17,7 +21,7 @@ sudo apt-get update
 sudo apt-get install php7.2 -y
 
 # Install needed modules for PHP
-sudo apt-get install php7.2-fpm php7.2-mysql php7.2-curl php7.2-gd php7.2-bz2 php7.2-mbstring php7.2-xml php7.2-zip php-bcmath -y
+sudo apt-get install php7.2-fpm php7.2-mysql php7.2-curl php7.2-gd php7.2-bz2 php7.2-mbstring php7.2-xml php7.2-zip php-bcmath -y php7.2-gmp
 
 # Install Composer (PHP dependencies manager)
 ## First install php-cli, unzip, git, curl, php-mbstring
