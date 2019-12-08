@@ -39,6 +39,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | 
 
 source ~/.bashrc
 
+sudo chmod -R 777 /home/navi/.nvm
 nvm install v12
 nvm alias default v12
 
