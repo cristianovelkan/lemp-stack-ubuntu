@@ -4,9 +4,9 @@ sudo mysql
 
 #remove root access with no password on local
 #create application user
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'P1983c22decbf421888afc0011f44dcb2+';
-CREATE USER 'paytecno'@'%' IDENTIFIED BY 'P1983c22decbf421888afc0011f44dcb2+';
-GRANT ALL PRIVILEGES ON *.* TO 'paytecno'@'%' WITH GRANT OPTION;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+CREATE USER 'user'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 exit;
 
