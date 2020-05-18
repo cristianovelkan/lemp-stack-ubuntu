@@ -1,7 +1,7 @@
 # Installing LEMP Stack
 
 - Nginx
-- PHP7.2 and its dependencies
+- PHP7.4 and its dependencies
 - Composer
 - NodeJS
 - Certbot
