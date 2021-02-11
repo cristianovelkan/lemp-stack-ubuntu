@@ -2,21 +2,17 @@
 sudo apt-get update
 sudo apt install build-essential -y
 sudo apt -y install software-properties-common
-
-# Install PHP 7.4
-sudo add-apt-repository ppa:ondrej/php
-sudo add-apt-repository ppa:ondrej/nginx-mainline
 sudo apt-get update
 
 # Install Nginx
-sudo apt-get install nginx php7.4-fpm
+sudo apt-get install nginx php7.4 php7.4-fpm -y
 
 # Install needed modules for PHP
 sudo apt-get install php7.4-mysql php7.4-curl php7.4-gd php7.4-bz2 php7.4-mbstring php7.4-xml php7.4-zip php-bcmath -y php7.4-gmp php7.4-intl
 
 # Install Composer (PHP dependencies manager)
 ## First install php-cli, unzip, git, curl, php-mbstring
-sudo apt-get install curl git unzip -y
+sudo apt-get install curl unzip -y
 
 ## Downloading and installing Composer
 cd ~
@@ -37,16 +33,14 @@ sudo service php7.4-fpm restart
 sudo systemctl reload nginx
 
 #node
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.37.2/install.sh | bash
 cd ~
 source .bashrc
 
-sudo chmod -R 777 /home/navi/.nvm
-nvm install v12
-nvm alias default v12
+sudo chmod -R 777 /home/ubuntu/.nvm
+nvm install v14
+nvm alias default v14
 
 #certbot ssl
-sudo add-apt-repository ppa:certbot/certbot
+sudo apt install certbot python3-certbot-nginx -y
 sudo apt-get update
-
-sudo apt-get install python-certbot-nginx -y
